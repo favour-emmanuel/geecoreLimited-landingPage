@@ -4,46 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <link rel="icon" href="./assets/brands/favicon-32x32.png" />
   </head>
   <body>
     <main class="max-w-[100rem] mx-auto">
-      <header class="px-5 py-5">
-        <nav
-          class="max-w-5xl mx-auto bg-paleOrange px-5 rounded-full py-3 flex items-center justify-between"
-        >
-          <!-- logo -->
-          <a href="/" class="flex gap-1 items-center">
-            <img src="./assets/brands/logo.svg" alt="logo" />
-            <h3 class="font-bold">Geecorelimited</h3>
-          </a>
-          <!-- nav items -->
-          <ul class="flex items-center gap-8">
-            <li class="navList"><a href="#">Home</a></li>
-            <li class="navList"><a href="#">Our Service</a></li>
-            <li class="navList"><a href="#">About Us</a></li>
-            <li class="navList"><a href="#">Testimonials</a></li>
-          </ul>
-          <button class="navBtn">Projects</button>
-          <!-- hambyrger menu icon -->
-          <div
-            id="menuToggler"
-            class="md:hidden text-2xl font-medium text-appBlack"
+      <div>
+        <header class="px-5 py-5">
+          <nav
+            class="max-w-5xl mx-auto bg-paleOrange px-5 rounded-full py-3 flex items-center justify-between"
           >
-            <i class="bi bi-list"></i>
-          </div>
-          <!-- mobile menu navigation -->
-          <!-- <ul id="menuBar" class="md:hidden flex items-center gap-8">
-            <li class="navList"><a href="#">Home</a></li>
-            <li class="navList"><a href="#">Our Service</a></li>
-            <li class="navList"><a href="#">About Us</a></li>
-            <li class="navList"><a href="#">Testimonials</a></li>
-          </ul> -->
-        </nav>
-      </header>
+            <!-- logo -->
+            <a href="#" class="flex gap-1 items-center">
+              <img src="./assets/brands/logo.svg" alt="logo" />
+              <h3 class="font-bold">Geecorelimited</h3>
+            </a>
+            <!-- Desktop navigation -->
+            <ul class="md:flex items-center justify-center hidden gap-8">
+              <li class="navList"><a href="#home">Home</a></li>
+              <li class="navList"><a href="#service">Our Service</a></li>
+              <li class="navList"><a href="#about">About Us</a></li>
+              <li class="navList">
+                <a href="#testimonials">Testimonials</a>
+              </li>
+            </ul>
+            <button class="navBtn">Projects</button>
+            <!-- mobile navigation -->
+            <div
+              class="navLinks md:hidden absolute pt-9 bg-white px-5 md:min-h-fit min-h-[100vh] left-0 top-[-100%] md:w-auto w-full items-center"
+            >
+              <div class="flex justify-start">
+                <a href="#" class="flex gap-1 items-center">
+                  <img src="./assets/brands/logo.svg" alt="logo" />
+                  <h3 class="font-bold">Geecorelimited</h3>
+                </a>
+              </div>
+              <ul class="flex flex-col items-center justify-center gap-10">
+                <li class="navList"><a href="#home">Home</a></li>
+                <li class="navList"><a href="#service">Our Service</a></li>
+                <li class="navList"><a href="#about">About Us</a></li>
+                <li class="navList">
+                  <a href="#testimonials">Testimonials</a>
+                </li>
+              </ul>
+              <div class="mt-5 flex justify-center">
+                <button
+                  class="py-4 px max-w-[10rem] px-10 text-base sm:text-sm rounded-full bg-appYellow text-appBlack"
+                >
+                  Projects
+                </button>
+              </div>
+            </div>
+            <!-- hamburger -->
+            <ion-icon
+              name="menu"
+              onclick="onToggleMenu(this)"
+              class="text-4xl text-appYellow cursor-pointer md:hidden"
+            ></ion-icon>
+          </nav>
+        </header>
+      </div>
       <!-- hero section -->
       <section class="mt-20 px-5 lg:px-0 text-center">
         <h1
@@ -51,7 +74,7 @@
         >
           We Geecore Elevating Businesses With Cutting-Edge Software Solution
         </h1>
-        <p class="w-full text-base text-appGray">
+        <p class="max-w-[30rem] w-full mx-auto text-base text-appGray">
           It is our mission to help shape the digital landscape by offering
           top-tier products and services.
         </p>
@@ -60,8 +83,8 @@
         </div>
       </section>
       <!-- users -->
-      <div class="flex gap-6 justify-center items-center">
-        <img src="./assets/brands/users.svg" alt="" />
+      <div class="flex flex-wrap gap-6 justify-center items-center px-5">
+        <img src="./assets/brands/users.svg" alt="" class="max-w-[8rem]" />
         <p class="text-sm">
           <span class="font-bold">50k+</span> Happy Customers
         </p>
@@ -79,7 +102,7 @@
         </div>
       </section>
       <!-- Service Section -->
-      <section class="py-16 text-center">
+      <section id="service" class="py-16 text-center">
         <div class="mt-8">
           <h3 class="textHeading">Services We Provide</h3>
           <p class="pText">
@@ -158,7 +181,7 @@
         </div>
       </section>
       <!-- About section -->
-      <section class="py-14 max-w-5xl mx-auto lg:px-0 px-5">
+      <section id="about" class="py-14 max-w-5xl mx-auto lg:px-0 px-5">
         <div class="max-w-[29rem]">
           <h3 class="textHeading">We're All About</h3>
           <p class="pText">
@@ -196,7 +219,7 @@
         </div>
       </section>
       <!-- client feedback section -->
-      <section class="lg:px-0 my-16">
+      <section id="testimonials" class="lg:px-0 my-16">
         <h3 class="textHeading text-center">
           Client feedback is our top priority.
         </h3>

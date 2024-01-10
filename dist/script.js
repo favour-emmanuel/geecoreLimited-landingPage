@@ -1,15 +1,22 @@
-const hamburgerIcon = document.querySelector("#menuToggler");
-const navMenuIcon = document.querySelector("#menuBar");
+// const menuToggler = document.getElementById("menuToggler");
+// const mobileMneu = document.getElementById("mobileMenu");
+// const menuTogglerClose = document.getElementById("menuTogglerClose");
+// console.log(menuToggler);
 
-hamburgerIcon.addEventListener("click", () => {
-  // alert('hello')
-  hamburgerIcon.classList.toggle("active");
-  navMenuIcon.classList.toggle("active");
-});
+// menuToggler.addEventListener("click", (e) => {
+//   menuToggler.classList.add("hidden");
+//   menuTogglerClose.classList.remove("hidden");
+// });
 
-document.querySelectorAll(".navList").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburgerIcon.classList.remove("active");
-    navMenuIcon.classList.remove("active");
-  })
-);
+// menuTogglerClose.addEventListener("click", () => {
+//   menuTogglerClose.classList.add("hidden");
+//   menuToggler.classList.remove("hidden");
+//   menuTogglerClose.classList.add("");
+// });
+
+const nav__links = document.querySelector(".navLinks");
+function onToggleMenu(e) {
+  // console.log(e.name);
+  e.name = e.name === "menu" ? "close" : "menu";
+  nav__links.classList.toggle("top-[4%]");
+}
