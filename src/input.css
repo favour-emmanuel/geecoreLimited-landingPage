@@ -37,10 +37,70 @@ body {
   @apply text-base sm:text-sm py-3 text-appGray;
 }
 
+.dataTitle {
+  @apply text-base sm:text-sm font-bold mb-2 text-appGray;
+}
+
 .iconContainer {
   @apply bg-paleOrange h-10 flex items-center justify-center aspect-square rounded-full;
 }
 
-/* .mobileStylying {
-  @apply lg:hidden md:hidden flex items-center gap-8;
+.footerIcon {
+  @apply text-[1.3rem] text-appGray;
+}
+
+/* .borderEffect {
+  @apply border-l-8 duration-500 ease-in-out h-auto;
+}
+.textEffect {
+  @apply h-auto overflow-hidden  transition-all duration-700 opacity-100;
 } */
+
+.accordion__list {
+  @apply flex mb-8;
+}
+.accordion__progress {
+  @apply relative mr-8;
+}
+
+.accordion__progress-indication {
+  @apply w-1 absolute top-0 left-0 bg-appBlack h-full rounded-md transform scale-y-0;
+}
+
+.accordion__text {
+  /* @apply overflow-hidden h-0 duration-300; */
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 1s ease-in-out;
+}
+
+.accordion__text p {
+  overflow: hidden;
+}
+
+.accordion__list--active .accordion__text {
+  /* @apply h-full; */
+  /* animation: gridBar 2s linear;
+  animation-fill-mode: forwards; */
+  grid-template-rows: 1fr;
+  transition: all 1s ease-in-out;
+}
+
+.accordion__progress-indication {
+  transform: scaleY(0);
+  /* transition: transform 5s; */
+}
+
+.accordion__list--active .accordion__progress-indication {
+  transform: scaleY(1);
+}
+
+@keyframes progressBar {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
