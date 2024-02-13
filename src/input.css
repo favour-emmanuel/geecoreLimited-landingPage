@@ -49,13 +49,6 @@ body {
   @apply text-[1.3rem] text-appGray;
 }
 
-/* .borderEffect {
-  @apply border-l-8 duration-500 ease-in-out h-auto;
-}
-.textEffect {
-  @apply h-auto overflow-hidden  transition-all duration-700 opacity-100;
-} */
-
 .accordion__list {
   @apply flex mb-8;
 }
@@ -68,7 +61,6 @@ body {
 }
 
 .accordion__text {
-  /* @apply overflow-hidden h-0 duration-300; */
   display: grid;
   grid-template-rows: 0fr;
   transition: all 1s ease-in-out;
@@ -79,16 +71,12 @@ body {
 }
 
 .accordion__list--active .accordion__text {
-  /* @apply h-full; */
-  /* animation: gridBar 2s linear;
-  animation-fill-mode: forwards; */
   grid-template-rows: 1fr;
   transition: all 1s ease-in-out;
 }
 
 .accordion__progress-indication {
   transform: scaleY(0);
-  /* transition: transform 5s; */
 }
 
 .accordion__list--active .accordion__progress-indication {
